@@ -1,0 +1,14 @@
+1. virtualenv -p python3 env
+2. . env/bin/activate
+3. pip install django
+4. django-admin startproject mysite . - create new project
+5. python manage.py migrate - create data_base file
+6. python manage.py runserver - run project
+7. python manage.py startapp blog - create new app
+8. - add app name into INSTALLED_APPS list in settings.py
+9. - create models for tables into the models.py
+10. python manage.py makemigrations blog - create tables for DB
+11. python manage.py migrate blog - migrate table into DB
+12. - check admin panel: http://127.0.0.1:8000/admin/
+13. python manage.py createsuperuser
+
