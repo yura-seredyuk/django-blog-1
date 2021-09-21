@@ -1,9 +1,12 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h1>New post</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+<a href="{% url 'post_list' %}">Home</a>
+    <h2>New post</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <a href="{% url 'post_detail' pk=pk %}">Cancel</a>
+            <button type="submit">Save</button>
+        </form>
 {% endblock %}

@@ -5,26 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <title>Blog 1</title>
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+    <title>Blog</title>
 </head>
 <body>
-    <div  class="page-header">
-        {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    <!-- <div id="header">
+        <span class="logo">Bookmarks</span>
+        {% if request.user.is_authenticated %}
+            <ul class="menu">
+                <li {% if section=="dashboard" %}class="selected"{% endif %}>
+                <a href="{% url " dashboard" %}">My dashboard</a>
+                </li>
+                <li {% if section=="images" %}class="selected"{% endif %}>
+                <a href="#">Images</a>
+                </li>
+                <li {% if section=="people" %}class="selected"{% endif %}>
+                    <a href="#">People</a>
+                </li>
+            </ul>
         {% endif %}
-        <h1><a href="{% url 'post_list' %}">Django Blog</a></h1>
-    </div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-            {% block content %}
-            {% endblock %}
-            </div>
-        </div>
-    </div>
+        <span class="user">
+            {% if request.user.is_authenticated %}
+                Hello {{ request.user.first_name }},
+                <a href="{% url "logout" %}">Logout</a>
+            {% else %}
+                <a href="{% url "login" %}">Log-in</a>
+            {% endif %}
+        </span>
+    </div> -->
+    <h1>BLOG list</h1>
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

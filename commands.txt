@@ -1,16 +1,15 @@
-1. virtualenv -p python3 env
-2. . env/bin/activate
-3. pip install django
-4. django-admin startproject mysite . - create new project
-5. python manage.py migrate - create data_base file
-6. python manage.py runserver - run project
-7. python manage.py startapp blog - create new app
-8. - add app name into INSTALLED_APPS list in settings.py
-9. - create models for tables into the models.py
-10. python manage.py makemigrations blog - create tables for DB
-11. python manage.py migrate blog - migrate table into DB
+1. venv
+2. pip install django
+3. django-admin startproject mysite . - create new project
+4. python manage.py migrate - create DB file
+5. python manage.py runserver - run project
+6. python manage.py startapp app - create new sub-app
+7. - add new app on INSTALLED_APPS from settings.py 
+8. - create models in app/models.py
+9. python manage.py createsuperuser - create super admin
+10. python manage.py makemigrations app - create table into app
+11. python manage.py migrate app  - migrate table into DB
 12. - check admin panel: http://127.0.0.1:8000/admin/
-13. python manage.py createsuperuser
 
 ######  Django ORM і QuerySets
 python manage.py shell - перейти у режим QuerySets
@@ -30,5 +29,3 @@ python manage.py shell - перейти у режим QuerySets
 >>> Post.objects.order_by('-created_date') - впорядкування у зворотньому порядку
 >>> Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date') - ланцюжок із QuerySets
 >>> exit() - вихід з консолі
-
-

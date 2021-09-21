@@ -1,0 +1,7 @@
+CLASSWORK: https://github.com/yura-seredyuk/web-03-django-blog
+
+E-SHOPER: https://github.com/yura-seredyuk/E-Shoper
+
+Завдання:
+    Імплементувати у базовий шаблон стилізацію та додати імпорт контейнерів header i footer.
+    Налаштувати зовнішній вигляд контейнерів з повідомленнями.
