@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zb(*$yvuz!min_krfz%td1xgg^*_4$aevkvy&bvqq+kwm%!=kx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 
 # ALLOWED_HOSTS = []
-DEBUG = False
+# DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
@@ -140,6 +140,5 @@ EMAIL_USE_TLS = True
 # EMAIL_BACKEND = 'yurii.seredyuk@gmail.com'
 
 
-# LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
-# LOGIN_URL = reverse_lazy('login')
-# LOGOUT_URL = reverse_lazy('logout')
+# LOGIN_REDIRECT_URL = 'home'
+# LOGOUT_REDIRECT_URL = 'home'
